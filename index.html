@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Página Inicial</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --color-bg: #0D0D0D;
+      --color-primary: #0088FF;
+      --color-secondary: #A020F0;
+      --color-accent: #39FF14;
+      --color-text: #fff;
+      --color-muted: #BFBFBF;
+      --radius: 15px;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Orbitron', sans-serif;
+      background: url('fundoo.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: var(--color-text);
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      animation: fadeIn 1.5s ease-in;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    button {
+      color: var(--color-text);
+      text-decoration: none;
+      padding: 12px 36px;
+      border-radius: var(--radius);
+      background: var(--color-accent);
+      font-size: 1rem;
+      transition: background 0.3s, transform 0.2s;
+      border: none;
+    }
+
+    button:hover {
+      background-color: #707582;
+      transform: scale(1.05);
+    }
+
+    .logo-container {
+      position: absolute;
+      top: 20px;
+      left: 5%;
+      transform: translateX(-50%);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .logo-container img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    header {
+      background-color: transparent;
+      padding: 10px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    header h1 {
+      font-size: clamp(2rem, 5vw, 3rem);
+      animation: slideIn 1.2s ease-in-out;
+    }
+
+    @keyframes slideIn {
+      from { opacity: 0; transform: translateX(-50px); }
+      to { opacity: 1; transform: translateX(0); }
+    }
+
+    nav {
+      background-color: transparent;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 60px 150px;
+      padding: 25px;
+      animation: fadeIn 2s ease-in;
+    }
+
+    nav a {
+      color: var(--color-text);
+      text-decoration: none; /* sem sublinhado */
+      padding: 12px 36px;
+      border-radius: var(--radius);
+      background: var(--color-accent);
+      font-size: 1rem;
+      transition: background 0.3s, transform 0.2s;
+    }
+
+    nav a:hover {
+      background-color: #707582;
+      transform: scale(1.05);
+    }
+
+    .content {
+      flex: 1;
+      padding: 50px 10px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      animation: fadeIn 1.5s ease-in;
+    }
+
+    .image-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 120px;
+      width: 100%;
+      max-width: 1200px;
+      margin-top: 40px;
+    }
+
+    .game-card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 180px;
+      text-align: center;
+      color: var(--color-text);
+      text-decoration: none;     /* remove sublinhado */
+      transition: transform 0.3s ease;
+      animation: fadeIn 1s ease-in;
+    }
+
+    .game-card img {
+      width: 220px;
+      height: 220px;
+      object-fit: contain;
+      background: transparent;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .game-card:hover img {
+      transform: scale(1.1);
+    }
+
+    .game-title {
+      margin-top: 1px;
+      font-size: 0.95rem;
+      color: #66B2FF;
+      text-decoration: none; /* garante sem sublinhado */
+    }
+
+    footer {
+      background-color: rgba(17, 17, 17, 0.7);
+      color: var(--color-muted);
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="logo-container">
+    <img src="raxinim.png" alt="Raxinim Logo" />
+  </div>
+
+  <header>
+    <button onclick="window.location.href='carrinho.html';">Ver Carrinho</button>
+    <h1>Party Games</h1>
+  </header>
+
+  <nav>
+    <a href="coup.html">Coup</a>
+    <a href="theresistance.html">The Resistance</a>
+    <a href="War.html">War</a>
+  </nav>
+
+  <main class="content">
+    <div class="image-container">
+      <a href="coup.html" class="game-card">
+        <img src="coupcaixasf.png" alt="Coup" />
+        <div class="game-title">Coup</div>
+      </a>
+
+      <a href="theresistance.html" class="game-card">
+        <img src="resistancecaixasf.png" alt="The Resistance" />
+        <div class="game-title">The Resistance</div>
+      </a>
+
+      <a href="War.html" class="game-card">
+        <img src="warSEcaixasf.png" alt="War" />
+        <div class="game-title">War</div>
+      </a>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 - João Victor & Leonel.</p>
+  </footer>
+
+</body>
+</html>
