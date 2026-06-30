@@ -1,218 +1,395 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Página Inicial</title>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet" />
-  <style>
-    :root {
-      --color-bg: #0D0D0D;
-      --color-primary: #0088FF;
-      --color-secondary: #A020F0;
-      --color-accent: #39FF14;
-      --color-text: #fff;
-      --color-muted: #BFBFBF;
-      --radius: 15px;
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+<title>Nextage Game Café</title>
 
-    body {
-      font-family: 'Orbitron', sans-serif;
-      background: var(--color-bg);;
-      background-size: cover;
-      color: var(--color-text);
-      display: flex;
-      flex-direction: column;
-      min-height: 100vh;
-      animation: fadeIn 1.5s ease-in;
-    }
+<link rel="stylesheet" href="style.css">
 
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 
-    button {
-      color: var(--color-text);
-      text-decoration: none;
-      padding: 12px 36px;
-      border-radius: var(--radius);
-      background: var(--color-accent);
-      font-size: 1rem;
-      transition: background 0.3s, transform 0.2s;
-      border: none;
-    }
-
-    button:hover {
-      background-color: #707582;
-      transform: scale(1.05);
-    }
-
-    .logo-container {
-      position: absolute;
-      top: 20px;
-      left: 5%;
-      transform: translateX(-50%);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .logo-container img {
-      width: 100px;
-      height: 100px;
-      border-radius: 50%;
-      object-fit: cover;
-    }
-
-    header {
-      background-color: transparent;
-      padding: 10px 20px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 20px;
-    }
-
-    header h1 {
-      font-size: clamp(2rem, 5vw, 3rem);
-      animation: slideIn 1.2s ease-in-out;
-    }
-
-    @keyframes slideIn {
-      from { opacity: 0; transform: translateX(-50px); }
-      to { opacity: 1; transform: translateX(0); }
-    }
-
-    nav {
-      background-color: transparent;
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 60px 150px;
-      padding: 25px;
-      animation: fadeIn 2s ease-in;
-    }
-
-    nav a {
-      color: var(--color-text);
-      text-decoration: none; /* sem sublinhado */
-      padding: 12px 36px;
-      border-radius: var(--radius);
-      background: var(--color-accent);
-      font-size: 1rem;
-      transition: background 0.3s, transform 0.2s;
-    }
-
-    nav a:hover {
-      background-color: #707582;
-      transform: scale(1.05);
-    }
-
-    .content {
-      flex: 1;
-      padding: 50px 10px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      animation: fadeIn 1.5s ease-in;
-    }
-
-    .image-container {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 120px;
-      width: 100%;
-      max-width: 1200px;
-      margin-top: 40px;
-    }
-
-    .game-card {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      width: 180px;
-      text-align: center;
-      color: var(--color-text);
-      text-decoration: none;     /* remove sublinhado */
-      transition: transform 0.3s ease;
-      animation: fadeIn 1s ease-in;
-    }
-
-    .game-card img {
-      width: 220px;
-      height: 220px;
-      object-fit: contain;
-      background: transparent;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .game-card:hover img {
-      transform: scale(1.1);
-    }
-
-    .game-title {
-      margin-top: 1px;
-      font-size: 0.95rem;
-      color: #66B2FF;
-      text-decoration: none; /* garante sem sublinhado */
-    }
-
-    footer {
-      background-color: rgba(17, 17, 17, 0.7);
-      color: var(--color-muted);
-      text-align: center;
-      padding: 20px;
-      font-size: 0.9rem;
-    }
-  </style>
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 </head>
+
 <body>
 
-  <div class="logo-container">
-    <img src="raxinim.png" alt="Raxinim Logo" />
-  </div>
+<header>
 
-  <header>
-    <button onclick="window.location.href='carrinho.html';">Ver Carrinho</button>
-    <h1>Party Games</h1>
-  </header>
+<div class="logo">
+NEXTAGE
+<span>GAME CAFÉ</span>
+</div>
 
-  <nav>
-    <a href="coup.html">Coup</a>
-    <a href="theresistance.html">The Resistance</a>
-    <a href="War.html">War</a>
-  </nav>
+<nav>
 
-  <main class="content">
-    <div class="image-container">
-      <a href="coup.html" class="game-card">
-        <img src="coupcaixasf.png" alt="Coup" />
-        <div class="game-title">Coup</div>
-      </a>
+<a href="#inicio">Início</a>
 
-      <a href="theresistance.html" class="game-card">
-        <img src="resistancecaixasf.png" alt="The Resistance" />
-        <div class="game-title">The Resistance</div>
-      </a>
+<a href="#ambientes">Ambientes</a>
 
-      <a href="War.html" class="game-card">
-        <img src="warSEcaixasf.png" alt="War" />
-        <div class="game-title">War</div>
-      </a>
-    </div>
-  </main>
+<a href="#reservas">Reservas</a>
 
-  <footer>
-    <p>&copy; 2025 - João Victor & Leonel.</p>
-  </footer>
+<a href="#cardapio">Cardápio</a>
+
+<a href="#status">Status</a>
+
+<a href="#contato">Contato</a>
+
+</nav>
+
+</header>
+
+<section class="hero" id="inicio">
+
+<div class="hero-text">
+
+<h1>O futuro dos Game Cafés chegou.</h1>
+
+<p>
+
+Uma experiência completa com PCs Gamer, Realidade Virtual, robôs entregadores e cafeteria premium.
+
+</p>
+
+<a href="#reservas" class="btn">
+Reservar Agora
+</a>
+
+</div>
+
+</section>
+
+<section id="ambientes">
+
+<h2>Ambientes</h2>
+
+<div class="cards">
+
+<div class="card">
+
+<i class="fa-solid fa-computer"></i>
+
+<h3>Online Arena</h3>
+
+<p>
+
+Computadores de última geração para jogos competitivos.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<i class="fa-solid fa-vr-cardboard"></i>
+
+<h3>VR Zone</h3>
+
+<p>
+
+Realidade Virtual imersiva com equipamentos premium.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<i class="fa-solid fa-dragon"></i>
+
+<h3>Sala RPG</h3>
+
+<p>
+
+Mesas temáticas para RPG de mesa e board games.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<i class="fa-solid fa-mug-hot"></i>
+
+<h3>Café Central</h3>
+
+<p>
+
+Bebidas especiais, sobremesas e refeições rápidas.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="reservas">
+
+<h2>Reservar</h2>
+
+<form id="formReserva">
+
+<input
+type="text"
+placeholder="Nome"
+required>
+
+<input
+type="email"
+placeholder="Email"
+required>
+
+<input
+type="date"
+required>
+
+<input
+type="time"
+required>
+
+<select>
+
+<option>Online Arena</option>
+
+<option>VR Zone</option>
+
+<option>Sala RPG</option>
+
+<option>Café Central</option>
+
+</select>
+
+<button>
+
+Confirmar Reserva
+
+</button>
+
+</form>
+
+<div id="respostaReserva"></div>
+
+</section>
+
+<section id="cardapio">
+
+<h2>Cardápio</h2>
+
+<div class="menu">
+
+<div class="produto">
+
+<h3>☕ Cappuccino</h3>
+
+<p>R$ 15</p>
+
+<button onclick="adicionar('Cappuccino',15)">
+
+Adicionar
+
+</button>
+
+</div>
+
+<div class="produto">
+
+<h3>🍔 Hambúrguer Gamer</h3>
+
+<p>R$ 32</p>
+
+<button onclick="adicionar('Hambúrguer',32)">
+
+Adicionar
+
+</button>
+
+</div>
+
+<div class="produto">
+
+<h3>🍟 Batata Suprema</h3>
+
+<p>R$ 22</p>
+
+<button onclick="adicionar('Batata',22)">
+
+Adicionar
+
+</button>
+
+</div>
+
+<div class="produto">
+
+<h3>🍰 Brownie</h3>
+
+<p>R$ 18</p>
+
+<button onclick="adicionar('Brownie',18)">
+
+Adicionar
+
+</button>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="carrinho">
+
+<h2>Pedido</h2>
+
+<ul id="listaPedidos"></ul>
+
+<h3 id="total">
+
+Total: R$0
+
+</h3>
+
+<button onclick="finalizarPedido()">
+
+Enviar Pedido
+
+</button>
+
+</section>
+
+<section id="status">
+
+<h2>Status das Máquinas</h2>
+
+<table>
+
+<tr>
+
+<th>PC</th>
+
+<th>Status</th>
+
+</tr>
+
+<tr>
+
+<td>PC 01</td>
+
+<td class="livre">
+
+Livre
+
+</td>
+
+</tr>
+
+<tr>
+
+<td>PC 02</td>
+
+<td class="ocupado">
+
+Ocupado
+
+</td>
+
+</tr>
+
+<tr>
+
+<td>PC 03</td>
+
+<td class="livre">
+
+Livre
+
+</td>
+
+</tr>
+
+<tr>
+
+<td>PC 04</td>
+
+<td class="reservado">
+
+Reservado
+
+</td>
+
+</tr>
+
+<tr>
+
+<td>PC 05</td>
+
+<td class="livre">
+
+Livre
+
+</td>
+
+</tr>
+
+</table>
+
+</section>
+
+<section class="robot">
+
+<h2>Robô Entregador</h2>
+
+<div class="barra">
+
+<div id="progresso">
+
+</div>
+
+</div>
+
+<p id="statusEntrega">
+
+Aguardando pedido...
+
+</p>
+
+</section>
+
+<footer id="contato">
+
+<h2>
+
+NEXTAGE GAME CAFÉ
+
+</h2>
+
+<p>
+
+📍 Rua Gamer, 404
+
+</p>
+
+<p>
+
+📞 (67) 99999-9999
+
+</p>
+
+<p>
+
+Instagram: @nextagegamecafe
+
+</p>
+
+</footer>
+
+<script src="script.js"></script>
 
 </body>
+
 </html>
