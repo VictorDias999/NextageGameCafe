@@ -1175,7 +1175,214 @@ footer a:hover{
     color:black;
 
 }
+/* ===================================================
+   RESPONSIVIDADE - CELULAR
+=================================================== */
 
+@media screen and (max-width:768px){
+
+header{
+
+    flex-direction:column;
+    padding:15px;
+    gap:15px;
+
+}
+
+.logo{
+
+    font-size:1.8rem;
+    text-align:center;
+
+}
+
+nav{
+
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:12px;
+
+}
+
+nav a{
+
+    font-size:14px;
+
+}
+
+.hero{
+
+    padding:120px 20px 50px;
+    min-height:auto;
+    text-align:center;
+
+}
+
+.hero h1{
+
+    font-size:2.2rem;
+    line-height:1.2;
+
+}
+
+.hero p{
+
+    font-size:15px;
+    margin-bottom:25px;
+
+}
+
+.btn{
+
+    width:100%;
+    margin-top:10px;
+
+}
+
+.cards{
+
+    grid-template-columns:1fr;
+
+}
+
+.menu{
+
+    grid-template-columns:1fr;
+
+}
+
+.card{
+
+    padding:25px;
+
+}
+
+.produto{
+
+    padding:20px;
+
+}
+
+form{
+
+    padding:20px;
+
+}
+
+input,
+select,
+button{
+
+    width:100%;
+
+}
+
+table{
+
+    display:block;
+    overflow-x:auto;
+    white-space:nowrap;
+
+}
+
+section{
+
+    padding:60px 20px;
+
+}
+
+section h2{
+
+    font-size:2rem;
+
+}
+
+footer{
+
+    padding:40px 20px;
+
+}
+
+footer p{
+
+    font-size:14px;
+
+}
+
+.barra{
+
+    width:100%;
+
+}
+
+}
+
+/* ===================================================
+   TELAS MUITO PEQUENAS
+=================================================== */
+
+@media screen and (max-width:480px){
+
+.hero h1{
+
+    font-size:1.8rem;
+
+}
+
+.hero p{
+
+    font-size:14px;
+
+}
+
+.logo{
+
+    font-size:1.5rem;
+
+}
+
+nav{
+
+    flex-direction:column;
+    align-items:center;
+
+}
+
+nav a{
+
+    width:100%;
+    text-align:center;
+    padding:10px;
+
+}
+
+.btn{
+
+    font-size:15px;
+    padding:14px;
+
+}
+
+.card h3{
+
+    font-size:20px;
+
+}
+
+.produto h3{
+
+    font-size:18px;
+
+}
+
+section h2{
+
+    font-size:1.7rem;
+
+}
+
+}
 /* ===================================================
    TRANSIÇÕES GLOBAIS
 =================================================== */
